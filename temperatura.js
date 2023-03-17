@@ -25,7 +25,9 @@ const convertTemperature = (value) => {
     const valueType = verifyUnityType(value);
     const number = getNumber(value);
 
-    return valueType === 'F' ? ((number-32) * (5/9)) + 'C' : (number * 9/5 + 32 ) + 'F';
+    return valueType === 'F' 
+        ? ((number-32) * (5/9)) + 'C' 
+        : (number * 9/5 + 32 ) + 'F';
 }
 
 console.log(convertTemperature('10C')); // 50F
