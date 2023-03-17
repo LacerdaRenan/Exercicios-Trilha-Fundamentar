@@ -14,16 +14,22 @@
  */
 
 const converteNota = (nota) => {
-    let notaParaCaratere;
+    let notaParaCaratere = {
+        A: 'A',
+        B: 'B',
+        C: 'C',
+        D: 'D',
+        F: 'F',
+        INVALIDA: 'Nota Invalida'
+    }
 
-    nota >= 90 && nota <= 100 ? notaParaCaratere = 'A' :
-    nota >= 80 && nota <= 89 ? notaParaCaratere = 'B':
-    nota >= 70 && nota <= 79 ? notaParaCaratere = 'C':
-    nota >= 60 && nota <= 69 ? notaParaCaratere = 'D':
-    nota >= 0 && nota < 60 ? notaParaCaratere = 'F':
-    notaParaCaratere = 'Nota Invalida';
+    return nota >= 90 && nota <= 100 ? notaParaCaratere[A] :
+    nota >= 80 && nota <= 89 ? notaParaCaratere[B]:
+    nota >= 70 && nota <= 79 ? notaParaCaratere[C]:
+    nota >= 60 && nota <= 69 ? notaParaCaratere[D]:
+    nota >= 0 && nota < 60 ? notaParaCaratere[F]:
+    notaParaCaratere[INVALIDA];
 
-    return notaParaCaratere;
 }
 
 console.log(converteNota(100)); // A
