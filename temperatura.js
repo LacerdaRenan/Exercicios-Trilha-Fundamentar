@@ -8,7 +8,6 @@
  * Ex: convertTemperature(50F) returns 10C
  * 
  * C = (F - 32) * 5/9
- * 
  * F = C * 9/5 + 32
  */
 
